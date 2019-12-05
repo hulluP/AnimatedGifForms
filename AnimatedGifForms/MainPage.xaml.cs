@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.IO;
 using Xamarin.Forms;
 
 namespace AnimatedGifForms
@@ -10,12 +11,16 @@ namespace AnimatedGifForms
     public partial class MainPage : ContentPage
     {
         public bool IsPlaying { get; set; }
+        public string secondImageSource { get; set; }
 
         public MainPage()
         {
             InitializeComponent();
 
             BindingContext = this;
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            secondImageSource = Path.Combine(path, "Dimg.gif");
+            OnPropertyChanged(nameof(secondImageSource));
         }
 
         void Button_Clicked(object sender, EventArgs e)
@@ -23,5 +28,7 @@ namespace AnimatedGifForms
             IsPlaying = !IsPlaying;
             OnPropertyChanged(nameof(IsPlaying));
         }
+
+
     }
 }

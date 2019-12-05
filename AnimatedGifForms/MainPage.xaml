@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="AnimatedGifForms.MainPage">
     <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
         <!-- Place new controls here -->
-        <Image Source="JustSmileAndWave.gif" IsAnimationPlaying="{Binding IsPlaying, Mode=TwoWay}"  />
 
-        <Button Text="Play/pause" Clicked="Button_Clicked" /> 
+
+        <Button Text="Play/pause" Clicked="Button_Clicked" />
+        <Image  Source="{Binding secondImageSource, Mode=TwoWay}" IsAnimationPlaying="{Binding IsPlaying, Mode=TwoWay}"  />
     </StackLayout>
 </ContentPage>

@@ -10,7 +10,7 @@ namespace AnimatedGifForms
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LocalImages();
         }
 
         protected override void OnStart()

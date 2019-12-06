@@ -3,8 +3,7 @@
     <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
         <!-- Place new controls here -->
 
-
-        <Button Text="Play/pause" Clicked="Button_Clicked" />
-        <Image  Source="{Binding secondImageSource, Mode=TwoWay}" IsAnimationPlaying="{Binding IsPlaying, Mode=TwoWay}"  />
+        <Button Text="Download" Clicked="Download_Clicked" />
+        <Button Text="loadImage" Clicked="Button_Clicked" />
     </StackLayout>
 </ContentPage>
